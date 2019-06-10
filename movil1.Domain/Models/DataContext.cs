@@ -8,5 +8,7 @@
         {
             
         }
+
+        public System.Data.Entity.DbSet<movil1.Common.Models.Aliment> Aliments { get; set; }
     }
 }
