@@ -6,46 +6,8 @@ namespace movil1.Common.Models
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public class Aliment1
-    {
-        [Key]
-        public int IdAliment { get; set; }
-
-        [Required]
-        public string Alimento { get; set; }
-
-        public float Calorias { get; set; }
-
-        public float Grasas { get; set; }
-
-        public float Proteinas { get; set; }
-
-        public float Carbohidratos { get; set; }
-
-        [Display(Name = "Cantidad gr.")]
-        public int Cantidad { get; set; }
-
-        [ForeignKey(Porciones)]
-        public int IdPorcion { get; set; }
-
-        public Porciones Porciones { get; set; }
-
-    }
-
-    public class Porciones
-    {
-        [Key]
-        public int IdPorcion { get; set; }
-
-        public string Porcion { get; set; }
-
-        public string Tipo { get; set; }
-
-        [Display(Name = "Cantidad 1")]
-        public int Cantidad1 { get; set; }
-
-    }
-
+    
+   
     public class AlimentoDiario1
     {
         [Key]
@@ -78,6 +40,27 @@ namespace movil1.Common.Models
 
         [Key]
         public int IdAliment { get; set; }
+
+    }
+
+    public class Aliment1
+    {
+        [Key]
+        public int IdAliment { get; set; }
+
+        [Required]
+        public string Alimento { get; set; }
+
+        public float Calorias { get; set; }
+
+        public float Grasas { get; set; }
+
+        public float Proteinas { get; set; }
+
+        public float Carbohidratos { get; set; }
+        
+        [Display(Name = "Cantidad gr.")]
+        public Porciones { get; set; }
 
     }
 
